@@ -33,9 +33,9 @@ bool isExpensiveBeer(BeerBrand beerBrand)
  * @todo Implement lambda beer country equality comparator
  * @return true if beer county is the same, false otherwise
  */
-auto sameCountry = [](BeerBrand l, BeerBrand r)
+auto sameCountry = [](BeerBrand lhs, BeerBrand rhs)
 {
-    return getBeerCountry(l) == getBeerCountry(r);
+    return getBeerCountry(lhs) == getBeerCountry(rhs);
 };
 
 struct MixingPolicy
