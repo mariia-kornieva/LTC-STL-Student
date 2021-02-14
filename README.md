@@ -22,7 +22,7 @@
 
 ### 1. If pull request contain any non-related changes, it will be rejected without review.
 ### 2. If tests are not passed, pull request will be rejected
-### 3. Pull request title should contain task name and your surname _(e.g iterators task (1) - Woodman)_
+### 3. Pull request title should contain task name and your surname _(e.g iterators task (1) - Petrov)_
 ### 4. Don't modify tests
 ### 5. Don't change task interface
   
@@ -47,21 +47,19 @@ If google test does not compile, try define in CMake:
   
   
 ## Requirements
-1. **Packages:**  
-     * **unzip**
-      * **wget**  
-2. **Tools:**  
-     * **CMake 3.0+**
-     * **C++ compiler that supports C++17 filesystem**
+**Tools:**  
+  * **CMake 3.0+**
+  * **C++ compiler that supports C++17 filesystem** (**gcc** recommended, because code tested only for it)
+  * **Git**
   
   
 For Windows:  
-_[unzip](http://gnuwin32.sourceforge.net/packages/unzip.htm)   
-[wget](http://gnuwin32.sourceforge.net/packages/wget.htm)  
-[cmake](https://cmake.org/download/)_    
+_[cmake](https://cmake.org/download/)_  
+_[Qt Creator + compiler](https://www.qt.io/download-qt-installer)_  
+_[Git](https://git-scm.com/downloads)_
   
 For Ubuntu:  
-_`sudo apt-get install wget unzip cmake`_  
+_`sudo apt-get install cmake qtcreator git gcc`_  
   
   
 ## Recommended environment
@@ -69,6 +67,16 @@ _`sudo apt-get install wget unzip cmake`_
 * Qt Creator IDE  
 * gcc 7.3.0+ (or latest)  
 * gdb  
+
+## Best practices and codestyle  
+If you want to improve your code style during the training, **please follow C++ Core Guidelines**.
+Especially, you must follow these rules:
+* https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#S-naming (MAKE YOUR CODE READABLE AS ENGLISH - AVOID ABBREVIATIONS AND MAGIC NUMBERS/VARIABLES!)
+* https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#Rcpl-C (USE C++, NOT C!)
+* https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#S-resource (DON'T MANUALLY CONTROL THE RESOURCES!)
+* https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#S-performance (DON'T OPTIMIZE JUST BECAUSE YOU WANT!)
+* https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#S-expr (DON'T REINVENT THE WHEEL AND MAKE CODE SIMPLER TO UNDERSTAND!)
+
 
 ## If you are not familiar with git:
 1. [Install git](https://git-scm.com/downloads)
@@ -91,3 +99,17 @@ _`sudo apt-get install wget unzip cmake`_
    * _....create pull request on [Github](https://github.com/smay1613/LTC-STL-Student/pulls)...._
    * _Switch back to master branch:_  
         `git checkout master`
+
+## How to sync a fork
+1. https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/configuring-a-remote-for-a-fork
+2. https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/syncing-a-fork
+
+## Help wanted!
+If you want to get some experience, you can contribute to this repository:
+* Add more tests for practice
+* Improve CMake
+* If you have bash experience, you can help with repository automation (for pull requests) using Github Actions API:
+  * Build
+  * Testing
+  * Labeling
+  * Mark counter
